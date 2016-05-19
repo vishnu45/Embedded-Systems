@@ -1,0 +1,34 @@
+#INCLUDE P16F877A.INC
+LIST P=16F877A
+ORG 0X00
+GOTO START
+ORG 0X20
+
+START:
+BSF STATUS,RP0
+CLRF TRISB
+MOVLW 0X00
+MOVWF TRISD
+BCF STATUS,RP0
+
+MOVLW 0X90
+MOVWF RCSTA
+BSF STATUS,RP0
+MOVLW 0X06
+MOVWF SPBRG
+MOVLW 0X20
+MOVWF TXSTA
+BCF STATUS,RP0
+BSF RCSTA,SPEN
+
+;-----------------------------------------------------------
+;RECIEVING SERIAL DATA
+;-----------------------------------------------------------
+CLRF PORTD
+STARTING_RECEPTION:
+MOVF RCREG,0
+MOVWF PORTD
+GOTO STARTING_RECEPTION
+
+;-----------------------------------------------------------
+END

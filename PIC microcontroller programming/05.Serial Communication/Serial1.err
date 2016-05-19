@@ -1,0 +1,8 @@
+Warning[215] E:\TESTING\05.SERIAL COMMUNICATION\SERIAL1.ASM 4 : Processor superseded by command line.  Verify processor symbol.
+Message[301] C:\PROGRAM FILES\MICROCHIP\MPASM SUITE\P16F874.INC 39 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] E:\TESTING\05.SERIAL COMMUNICATION\SERIAL1.ASM 30 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\TESTING\05.SERIAL COMMUNICATION\SERIAL1.ASM 31 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\TESTING\05.SERIAL COMMUNICATION\SERIAL1.ASM 33 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\TESTING\05.SERIAL COMMUNICATION\SERIAL1.ASM 35 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\TESTING\05.SERIAL COMMUNICATION\SERIAL1.ASM 126 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\TESTING\05.SERIAL COMMUNICATION\SERIAL1.ASM 127 : Register in operand not in bank 0.  Ensure that bank bits are correct.

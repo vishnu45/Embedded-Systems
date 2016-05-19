@@ -1,0 +1,38 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Sun Jan 10 14:36:44 2010
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000020    program   0x000034
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000020    0x000039      
+            27 out of 8456 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+         END_OF_RECEPTION   0x000035    program     static E:\Testing\15.Keypad_LCD SLEEP\USART12.ASM
+                    START   0x000020    program     static E:\Testing\15.Keypad_LCD SLEEP\USART12.ASM
+       STARTING_RECEPTION   0x00002e    program     static E:\Testing\15.Keypad_LCD SLEEP\USART12.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000020    program     static E:\Testing\15.Keypad_LCD SLEEP\USART12.ASM
+       STARTING_RECEPTION   0x00002e    program     static E:\Testing\15.Keypad_LCD SLEEP\USART12.ASM
+         END_OF_RECEPTION   0x000035    program     static E:\Testing\15.Keypad_LCD SLEEP\USART12.ASM
+
+

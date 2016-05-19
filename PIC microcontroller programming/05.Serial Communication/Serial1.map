@@ -1,0 +1,60 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Tue Dec 08 22:24:28 2009
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000004    program   0x0000cc
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000004    0x000069      
+            103 out of 8456 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     _sw2   0x000061    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     _sw3   0x000063    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                   bspace   0x000048    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                      cls   0x000045    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    delay   0x000060    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     getc   0x000052    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    getc1   0x000053    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     hang   0x00004b    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                   inthlr   0x000069    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     loop   0x000039    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     putc   0x000058    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    putc1   0x00005c    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    start   0x000005    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    wrcmd   0x00004d    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    start   0x000005    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     loop   0x000039    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                      cls   0x000045    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                   bspace   0x000048    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     hang   0x00004b    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    wrcmd   0x00004d    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     getc   0x000052    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    getc1   0x000053    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     putc   0x000058    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    putc1   0x00005c    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                    delay   0x000060    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     _sw2   0x000061    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                     _sw3   0x000063    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+                   inthlr   0x000069    program     static E:\Testing\05.Serial Communication\Serial1.ASM
+
+

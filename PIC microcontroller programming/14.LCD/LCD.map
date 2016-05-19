@@ -1,0 +1,49 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Tue Jan 05 22:01:46 2010
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000052
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000028      
+            41 out of 8456 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       D1   0x000017    program     static E:\Testing\14.LCD\LCD.ASM
+                      D11   0x000022    program     static E:\Testing\14.LCD\LCD.ASM
+                       D2   0x000015    program     static E:\Testing\14.LCD\LCD.ASM
+                      D21   0x000020    program     static E:\Testing\14.LCD\LCD.ASM
+                      D31   0x00001e    program     static E:\Testing\14.LCD\LCD.ASM
+                    DELAY   0x000013    program     static E:\Testing\14.LCD\LCD.ASM
+                   DELAY1   0x00001c    program     static E:\Testing\14.LCD\LCD.ASM
+                   ENABLE   0x00000e    program     static E:\Testing\14.LCD\LCD.ASM
+                     LOOP   0x00000d    program     static E:\Testing\14.LCD\LCD.ASM
+                    START   0x000007    program     static E:\Testing\14.LCD\LCD.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000007    program     static E:\Testing\14.LCD\LCD.ASM
+                     LOOP   0x00000d    program     static E:\Testing\14.LCD\LCD.ASM
+                   ENABLE   0x00000e    program     static E:\Testing\14.LCD\LCD.ASM
+                    DELAY   0x000013    program     static E:\Testing\14.LCD\LCD.ASM
+                       D2   0x000015    program     static E:\Testing\14.LCD\LCD.ASM
+                       D1   0x000017    program     static E:\Testing\14.LCD\LCD.ASM
+                   DELAY1   0x00001c    program     static E:\Testing\14.LCD\LCD.ASM
+                      D31   0x00001e    program     static E:\Testing\14.LCD\LCD.ASM
+                      D21   0x000020    program     static E:\Testing\14.LCD\LCD.ASM
+                      D11   0x000022    program     static E:\Testing\14.LCD\LCD.ASM
+
+

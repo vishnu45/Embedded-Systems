@@ -1,0 +1,94 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Tue Dec 22 21:42:19 2009
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000020    program   0x000464
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000020    0x000251      
+            562 out of 8456 program addresses used, program memory utilization is 6%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ACC   0x0001f0    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                 ACCEPTED   0x000192    program     static E:\Testing\09.PIN check LCD\checking.ASM
+            AFTER_SCAN_IT   0x000088    program     static E:\Testing\09.PIN check LCD\checking.ASM
+        ASSIGN_NEW_TO_OLD   0x000069    program     static E:\Testing\09.PIN check LCD\checking.ASM
+            CHECK_ROUTINE   0x00008e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D1   0x000244    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D2   0x000242    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D3   0x00024b    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D4   0x00024d    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                      DCC   0x00023f    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                    DELAY   0x000240    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                   DELAY2   0x000249    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                   DENIED   0x0001f1    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                   GET_IT   0x00004e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+           GET_IT_SUBLOOP   0x00005c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+          GET_IT_SUBLOOP2   0x00005e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              KEY_IS_STAR   0x00009c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              KEY_IS_ZERO   0x0000a1    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              LOC_AT_FOUR   0x0000cc    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               LOC_AT_ONE   0x0000c3    program     static E:\Testing\09.PIN check LCD\checking.ASM
+             LOC_AT_THREE   0x0000c9    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               LOC_AT_TWO   0x0000c6    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              OUTPUT_FOUR   0x00015d    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              OUTPUT_NULL   0x00018a    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               OUTPUT_ONE   0x00010c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+            OUTPUT_SETTER   0x0000ee    program     static E:\Testing\09.PIN check LCD\checking.ASM
+             OUTPUT_THREE   0x000139    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               OUTPUT_TWO   0x00011e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               REG_SETTER   0x0000cf    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                  SCAN_IT   0x00006c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+           SCAN_IT_FINISH   0x000086    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                 SUB_LOOP   0x000070    program     static E:\Testing\09.PIN check LCD\checking.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   GET_IT   0x00004e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+           GET_IT_SUBLOOP   0x00005c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+          GET_IT_SUBLOOP2   0x00005e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+        ASSIGN_NEW_TO_OLD   0x000069    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                  SCAN_IT   0x00006c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                 SUB_LOOP   0x000070    program     static E:\Testing\09.PIN check LCD\checking.ASM
+           SCAN_IT_FINISH   0x000086    program     static E:\Testing\09.PIN check LCD\checking.ASM
+            AFTER_SCAN_IT   0x000088    program     static E:\Testing\09.PIN check LCD\checking.ASM
+            CHECK_ROUTINE   0x00008e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              KEY_IS_STAR   0x00009c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              KEY_IS_ZERO   0x0000a1    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               LOC_AT_ONE   0x0000c3    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               LOC_AT_TWO   0x0000c6    program     static E:\Testing\09.PIN check LCD\checking.ASM
+             LOC_AT_THREE   0x0000c9    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              LOC_AT_FOUR   0x0000cc    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               REG_SETTER   0x0000cf    program     static E:\Testing\09.PIN check LCD\checking.ASM
+            OUTPUT_SETTER   0x0000ee    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               OUTPUT_ONE   0x00010c    program     static E:\Testing\09.PIN check LCD\checking.ASM
+               OUTPUT_TWO   0x00011e    program     static E:\Testing\09.PIN check LCD\checking.ASM
+             OUTPUT_THREE   0x000139    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              OUTPUT_FOUR   0x00015d    program     static E:\Testing\09.PIN check LCD\checking.ASM
+              OUTPUT_NULL   0x00018a    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                 ACCEPTED   0x000192    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                      ACC   0x0001f0    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                   DENIED   0x0001f1    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                      DCC   0x00023f    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                    DELAY   0x000240    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D2   0x000242    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D1   0x000244    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                   DELAY2   0x000249    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D3   0x00024b    program     static E:\Testing\09.PIN check LCD\checking.ASM
+                       D4   0x00024d    program     static E:\Testing\09.PIN check LCD\checking.ASM
+
+

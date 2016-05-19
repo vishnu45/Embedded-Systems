@@ -1,0 +1,603 @@
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 #INCLUDE P16F877A.inc
+                      00001         LIST
+                      00002 ; P16F877A.INC  Standard Header File, Version 1.00    Microchip Technology, Inc.
+                      00400         LIST
+Warning[205]: Found directive in column 1. (LIST)
+                      00002 LIST P=16F877A
+                      00003 ;*******************************************************************************************************
+                            ****************************************************
+Warning[203]: Found opcode in column 1. (BSF)
+0000   1683           00004 BSF STATUS,RP0
+                      00005 ;BSF OPTION_REG,7               ;ENABLING PORTB PULLUPS
+Warning[203]: Found opcode in column 1. (MOVLW)
+0001   3000           00006 MOVLW 0X00
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   0087           00007 MOVWF TRISC
+Warning[203]: Found opcode in column 1. (MOVLW)
+0003   300F           00008 MOVLW 0X0F
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0004   0086           00009 MOVWF TRISB
+Warning[203]: Found opcode in column 1. (BCF)
+0005   1283           00010 BCF STATUS,RP0
+                      00011 
+                      00012 ;INITIALISING**********************************************
+0006                  00013 INITIALISING:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0006   3000           00014 MOVLW 0X00
+Warning[203]: Found opcode in column 1. (MOVWF)
+0007   0087           00015 MOVWF PORTC
+                      00016 ;*******************************************************************************************************
+                            ****************************************************
+                      00017 
+                      00018 
+                      00019 ;START*****************************************************
+0008                  00020 START:
+                      00021 
+                      00022 ;LOOP1*****************************************************
+0008                  00023 LOOP1:
+Warning[203]: Found opcode in column 1. (CALL)
+0008   2054           00024 CALL DELAY
+Warning[203]: Found opcode in column 1. (CLRF)
+0009   0186           00025 CLRF PORTB
+Warning[203]: Found opcode in column 1. (BSF)
+000A   1606           00026 BSF PORTB,4
+Warning[203]: Found opcode in column 1. (BTFSC)
+000B   1986           00027 BTFSC PORTB,3
+Warning[203]: Found opcode in column 1. (GOTO)
+000C   2812           00028 GOTO OUT1
+Warning[203]: Found opcode in column 1. (BTFSC)
+000D   1906           00029 BTFSC PORTB,2
+Warning[203]: Found opcode in column 1. (GOTO)
+000E   2815           00030 GOTO OUT2
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (BTFSC)
+000F   1886           00031 BTFSC PORTB,1
+Warning[203]: Found opcode in column 1. (GOTO)
+0010   2818           00032 GOTO OUT3
+Warning[203]: Found opcode in column 1. (GOTO)
+0011   281B           00033 GOTO LOOP2
+                      00034 
+0012                  00035 OUT1:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0012   3001           00036 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+0013   0087           00037 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+0014   2808           00038 GOTO START
+0015                  00039 OUT2:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0015   3002           00040 MOVLW 0X02
+Warning[203]: Found opcode in column 1. (MOVWF)
+0016   0087           00041 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+0017   2808           00042 GOTO START
+0018                  00043 OUT3:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0018   3003           00044 MOVLW 0X03
+Warning[203]: Found opcode in column 1. (MOVWF)
+0019   0087           00045 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+001A   2808           00046 GOTO START
+                      00047 
+                      00048 ;LOOP2*****************************************************
+001B                  00049 LOOP2:
+Warning[203]: Found opcode in column 1. (CALL)
+001B   2054           00050 CALL DELAY
+Warning[203]: Found opcode in column 1. (CLRF)
+001C   0186           00051 CLRF PORTB
+Warning[203]: Found opcode in column 1. (BSF)
+001D   1686           00052 BSF PORTB,5
+Warning[203]: Found opcode in column 1. (BTFSC)
+001E   1986           00053 BTFSC PORTB,3
+Warning[203]: Found opcode in column 1. (GOTO)
+001F   2825           00054 GOTO OUT4
+Warning[203]: Found opcode in column 1. (BTFSC)
+0020   1906           00055 BTFSC PORTB,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0021   2828           00056 GOTO OUT5
+Warning[203]: Found opcode in column 1. (BTFSC)
+0022   1886           00057 BTFSC PORTB,1
+Warning[203]: Found opcode in column 1. (GOTO)
+0023   282B           00058 GOTO OUT6
+Warning[203]: Found opcode in column 1. (GOTO)
+0024   282E           00059 GOTO LOOP3
+                      00060 
+0025                  00061 OUT4:
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (MOVLW)
+0025   3004           00062 MOVLW 0X04
+Warning[203]: Found opcode in column 1. (MOVWF)
+0026   0087           00063 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+0027   2808           00064 GOTO START
+0028                  00065 OUT5:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0028   3005           00066 MOVLW 0X05
+Warning[203]: Found opcode in column 1. (MOVWF)
+0029   0087           00067 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+002A   2808           00068 GOTO START
+002B                  00069 OUT6:
+Warning[203]: Found opcode in column 1. (MOVLW)
+002B   3006           00070 MOVLW 0X06
+Warning[203]: Found opcode in column 1. (MOVWF)
+002C   0087           00071 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+002D   2808           00072 GOTO START
+                      00073 
+                      00074 ;LOOP3*****************************************************
+002E                  00075 LOOP3:
+Warning[203]: Found opcode in column 1. (CALL)
+002E   2054           00076 CALL DELAY
+Warning[203]: Found opcode in column 1. (CLRF)
+002F   0186           00077 CLRF PORTB
+Warning[203]: Found opcode in column 1. (BSF)
+0030   1706           00078 BSF PORTB,6
+Warning[203]: Found opcode in column 1. (BTFSC)
+0031   1986           00079 BTFSC PORTB,3
+Warning[203]: Found opcode in column 1. (GOTO)
+0032   2838           00080 GOTO OUT7
+Warning[203]: Found opcode in column 1. (BTFSC)
+0033   1906           00081 BTFSC PORTB,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0034   283B           00082 GOTO OUT8
+Warning[203]: Found opcode in column 1. (BTFSC)
+0035   1886           00083 BTFSC PORTB,1
+Warning[203]: Found opcode in column 1. (GOTO)
+0036   283E           00084 GOTO OUT9
+Warning[203]: Found opcode in column 1. (GOTO)
+0037   2841           00085 GOTO LOOP4
+                      00086 
+0038                  00087 OUT7:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0038   3007           00088 MOVLW 0X07
+Warning[203]: Found opcode in column 1. (MOVWF)
+0039   0087           00089 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+003A   2808           00090 GOTO START
+003B                  00091 OUT8:
+Warning[203]: Found opcode in column 1. (MOVLW)
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+003B   3008           00092 MOVLW 0X08
+Warning[203]: Found opcode in column 1. (MOVWF)
+003C   0087           00093 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+003D   2808           00094 GOTO START
+003E                  00095 OUT9:
+Warning[203]: Found opcode in column 1. (MOVLW)
+003E   3009           00096 MOVLW 0X09
+Warning[203]: Found opcode in column 1. (MOVWF)
+003F   0087           00097 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+0040   2808           00098 GOTO START
+                      00099 
+                      00100 ;LOOP4*****************************************************
+0041                  00101 LOOP4:
+Warning[203]: Found opcode in column 1. (CALL)
+0041   2054           00102 CALL DELAY
+Warning[203]: Found opcode in column 1. (CLRF)
+0042   0186           00103 CLRF PORTB
+Warning[203]: Found opcode in column 1. (BSF)
+0043   1786           00104 BSF PORTB,7
+Warning[203]: Found opcode in column 1. (BTFSC)
+0044   1986           00105 BTFSC PORTB,3
+Warning[203]: Found opcode in column 1. (GOTO)
+0045   284B           00106 GOTO OUTA
+Warning[203]: Found opcode in column 1. (BTFSC)
+0046   1906           00107 BTFSC PORTB,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0047   284E           00108 GOTO OUTB
+Warning[203]: Found opcode in column 1. (BTFSC)
+0048   1886           00109 BTFSC PORTB,1
+Warning[203]: Found opcode in column 1. (GOTO)
+0049   2851           00110 GOTO OUTC
+Warning[203]: Found opcode in column 1. (GOTO)
+004A   2808           00111 GOTO LOOP1
+                      00112 
+004B                  00113 OUTA:
+Warning[203]: Found opcode in column 1. (MOVLW)
+004B   300A           00114 MOVLW 0X0A
+Warning[203]: Found opcode in column 1. (MOVWF)
+004C   0087           00115 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+004D   2808           00116 GOTO START
+004E                  00117 OUTB:
+Warning[203]: Found opcode in column 1. (MOVLW)
+004E   3000           00118 MOVLW 0X00
+Warning[203]: Found opcode in column 1. (MOVWF)
+004F   0087           00119 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+0050   2808           00120 GOTO START
+0051                  00121 OUTC:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0051   300C           00122 MOVLW 0X0C
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (MOVWF)
+0052   0087           00123 MOVWF PORTC
+Warning[203]: Found opcode in column 1. (GOTO)
+0053   2808           00124 GOTO START
+                      00125 
+                      00126 
+                      00127 ;*******************************************************************************************************
+                            ****************************************************
+0054                  00128 DELAY:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0054   3060           00129 MOVLW 0X60
+Warning[203]: Found opcode in column 1. (MOVWF)
+0055   00E1           00130 MOVWF 0X61
+0056   3060           00131 D2      MOVLW 0X60
+0057   00E0           00132         MOVWF 0X60
+0058   0BE0           00133 D1      DECFSZ 0X60,1
+0059   2858           00134         GOTO D1
+005A   0BE1           00135         DECFSZ 0X61,1
+005B   2856           00136         GOTO D2
+005C   0008           00137         RETURN
+                      00138 ;----------------------------------------------
+Warning[205]: Found directive in column 1. (END)
+                      00139 END
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHS0                              00000003
+CHS1                              00000004
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+D1                                00000058
+D2                                00000056
+DATA_ADDRESS                      00000005
+DC                                00000001
+DELAY                             00000054
+D_A                               00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INITIALISING                      00000006
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+LOOP1                             00000008
+LOOP2                             0000001B
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+LOOP3                             0000002E
+LOOP4                             00000041
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+OUT1                              00000012
+OUT2                              00000015
+OUT3                              00000018
+OUT4                              00000025
+OUT5                              00000028
+OUT6                              0000002B
+OUT7                              00000038
+OUT8                              0000003B
+OUT9                              0000003E
+OUTA                              0000004B
+OUTB                              0000004E
+OUTC                              00000051
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RBIE                              00000003
+RBIF                              00000000
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+READ_WRITE                        00000002
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_W                               00000002
+S                                 00000003
+SEN                               00000000
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+SSPOV                             00000006
+SSPSTAT                           00000094
+START                             00000008
+STATUS                            00000003
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISB                             00000086
+TRISC                             00000087
+TRISD                             00000088
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+MPASM  5.31                    SIMPLEDISP.ASM   12-6-2009  21:58:22         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_CP_OFF                           00003FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_HS_OSC                           00003FFE
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+__DEBUG                           1
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXX--- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:    93
+Program Memory Words Free:  8099
+
+
+Errors   :     0
+Warnings :    88 reported,     0 suppressed
+Messages :     2 reported,     0 suppressed
+
+

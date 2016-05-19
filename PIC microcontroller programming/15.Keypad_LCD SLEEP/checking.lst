@@ -1,0 +1,1820 @@
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 #INCLUDE <P16F877A.INC>
+                      00001         LIST
+                      00002 ; P16F877A.INC  Standard Header File, Version 1.00    Microchip Technology, Inc.
+                      00400         LIST
+Warning[205]: Found directive in column 1. (LIST)
+                      00002 LIST P=16F877A
+Warning[205]: Found directive in column 1. (ORG)
+0020                  00003 ORG 0X20
+                      00004 ;OHM GAM GANAPATAYE NAMAH
+                      00005 
+                      00006 ;-------------------------------------------------------------
+                      00007 ; USART INITIALISATIONS
+                      00008 ;-------------------------------------------------------------
+Warning[203]: Found opcode in column 1. (MOVLW)
+0020   3090           00009 MOVLW 0X90
+Warning[203]: Found opcode in column 1. (MOVWF)
+0021   0098           00010 MOVWF RCSTA
+Warning[203]: Found opcode in column 1. (BSF)
+0022   1683           00011 BSF STATUS,RP0
+Warning[203]: Found opcode in column 1. (MOVLW)
+0023   30FF           00012 MOVLW 0XFF
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0024   0099           00013 MOVWF SPBRG
+Warning[203]: Found opcode in column 1. (MOVLW)
+0025   3024           00014 MOVLW 0X24
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0026   0098           00015 MOVWF TXSTA
+Warning[203]: Found opcode in column 1. (BCF)
+0027   1283           00016 BCF STATUS,RP0
+Warning[203]: Found opcode in column 1. (BSF)
+0028   1798           00017 BSF RCSTA,SPEN
+                      00018 ;-------------------------------------------------------------
+Warning[203]: Found opcode in column 1. (BSF)
+0029   1683           00019 BSF STATUS,RP0
+Warning[203]: Found opcode in column 1. (MOVLW)
+002A   30F0           00020 MOVLW 0XF0
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+002B   0086           00021 MOVWF TRISB
+Warning[203]: Found opcode in column 1. (BCF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+002C   1007           00022 BCF TRISC,0
+Warning[203]: Found opcode in column 1. (BCF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+002D   1087           00023 BCF TRISC,1
+Warning[203]: Found opcode in column 1. (BCF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+002E   1107           00024 BCF TRISC,2
+Warning[203]: Found opcode in column 1. (MOVLW)
+002F   3000           00025 MOVLW 0X00
+Warning[203]: Found opcode in column 1. (MOVWF)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0030   0085           00026 MOVWF TRISA
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0031   0088           00027 MOVWF TRISD
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0032   0089           00028 MOVWF TRISE
+Warning[203]: Found opcode in column 1. (MOVLW)
+0033   3006           00029 MOVLW 0X06
+Warning[203]: Found opcode in column 1. (MOVWF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0034   009F           00030 MOVWF ADCON1
+Warning[203]: Found opcode in column 1. (BCF)
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0035   1381           00031 BCF OPTION_REG,7  ;PORTB PULLUPS ENABLED
+Warning[203]: Found opcode in column 1. (BCF)
+0036   1283           00032 BCF STATUS,RP0
+Warning[203]: Found opcode in column 1. (MOVLW)
+0037   3000           00033 MOVLW 0X00
+Warning[203]: Found opcode in column 1. (MOVWF)
+0038   00D0           00034 MOVWF 0X50
+Warning[203]: Found opcode in column 1. (MOVWF)
+0039   0089           00035 MOVWF PORTE
+Warning[203]: Found opcode in column 1. (BSF)
+003A   1407           00036 BSF PORTC,0; 
+Warning[203]: Found opcode in column 1. (BCF)
+003B   1087           00037 BCF PORTC,1; WRITE MODE
+Warning[203]: Found opcode in column 1. (BSF)
+003C   1507           00038 BSF PORTC,2;E=1
+Warning[203]: Found opcode in column 1. (CALL)
+003D   224F           00039 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+003E   1007           00040 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+003F   224F           00041 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+0040   300F           00042 MOVLW 0X0F
+Warning[203]: Found opcode in column 1. (MOVWF)
+0041   0088           00043 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0042   224F           00044 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0043   1107           00045 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0044   224F           00046 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0045   1507           00047 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0046   224F           00048 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+0047   3038           00049 MOVLW 0X38
+Warning[203]: Found opcode in column 1. (MOVWF)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0048   0088           00050 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0049   224F           00051 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+004A   1107           00052 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+004B   224F           00053 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+004C   1507           00054 BSF PORTC,2
+                      00055 
+Warning[203]: Found opcode in column 1. (GOTO)
+004D   298F           00056 GOTO OUTPUT_NULL
+                      00057 ;----------------------------------------------------------
+                      00058 ; SLEEP MODE COUNTERS INITIALISATION
+                      00059 ;----------------------------------------------------------
+Warning[203]: Found opcode in column 1. (MOVLW)
+004E   30FF           00060 MOVLW 0XFF
+Warning[203]: Found opcode in column 1. (MOVWF)
+004F   00D5           00061 MOVWF 0X55
+Warning[203]: Found opcode in column 1. (MOVLW)
+0050   30FF           00062 MOVLW 0XFF
+Warning[203]: Found opcode in column 1. (MOVWF)
+0051   00D6           00063 MOVWF 0X56
+                      00064 
+                      00065 ;----------------------------------------------------------
+                      00066 ; INTIALISING FOR SCANNING KEYPAD
+                      00067 ;----------------------------------------------------------
+0052                  00068 GET_IT
+                      00069 ;OLD_KEY=0X40
+                      00070 ;NEW_KEY=0X41
+                      00071 ;COUNT=0X42
+                      00072 ;DATA_COUNT=0X50
+                      00073 ;----------------------------
+                      00074 ; CHECKING PIN ENTERED
+                      00075 ;----------------------------
+Warning[203]: Found opcode in column 1. (MOVF)
+0052   081A           00076 MOVF RCREG,0
+Warning[203]: Found opcode in column 1. (MOVWF)
+0053   0085           00077 MOVWF PORTA
+Warning[203]: Found opcode in column 1. (MOVLW)
+0054   300A           00078 MOVLW 0X0A
+Warning[203]: Found opcode in column 1. (SUBWF)
+0055   0205           00079 SUBWF PORTA,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+0056   1903           00080 BTFSC STATUS,Z
+Warning[203]: Found opcode in column 1. (GOTO)
+0057   2997           00081 GOTO ACCEPTED
+                      00082 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0058   300D           00083 MOVLW 0X0D
+Warning[203]: Found opcode in column 1. (SUBWF)
+0059   0205           00084 SUBWF PORTA,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+005A   1903           00085 BTFSC STATUS,Z
+Warning[203]: Found opcode in column 1. (GOTO)
+005B   29F6           00086 GOTO DENIED
+                      00087 ;----------------------------
+                      00088 
+Warning[203]: Found opcode in column 1. (MOVF)
+005C   0850           00089 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (MOVLW)
+005D   3000           00090 MOVLW 0X00        
+Warning[203]: Found opcode in column 1. (MOVWF)
+005E   00C0           00091 MOVWF 0X40      ;OLD_KEY=0
+Warning[203]: Found opcode in column 1. (MOVWF)
+005F   00C1           00092 MOVWF 0X41      ;NEW_KEY=0
+0060                  00093 GET_IT_SUBLOOP
+Warning[203]: Found opcode in column 1. (MOVLW)
+0060   3000           00094 MOVLW 0X00
+Warning[203]: Found opcode in column 1. (MOVWF)
+0061   00C2           00095 MOVWF 0X42      ;COUNT=0
+0062                  00096 GET_IT_SUBLOOP2
+Warning[203]: Found opcode in column 1. (CALL)
+0062   2070           00097 CALL SCAN_IT
+Warning[203]: Found opcode in column 1. (MOVF)
+0063   0822           00098 MOVF 0X22,0
+Warning[203]: Found opcode in column 1. (MOVWF)
+0064   00C1           00099 MOVWF 0X41      ;MOVING KEY_VALUE TO NEW_KEY
+Warning[203]: Found opcode in column 1. (SUBWF)
+0065   0240           00100 SUBWF 0X40,0     ;W<--OLD_KEY-NEW_KEY
+Warning[203]: Found opcode in column 1. (BTFSS)
+0066   1D03           00101 BTFSS STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0067   286D           00102 GOTO ASSIGN_NEW_TO_OLD
+Warning[203]: Found opcode in column 1. (INCF)
+0068   0AC2           00103 INCF 0X42,1
+Warning[203]: Found opcode in column 1. (CALL)
+0069   224F           00104 CALL DELAY
+Warning[203]: Found opcode in column 1. (BTFSS)
+006A   1D03           00105 BTFSS STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+006B   2862           00106 GOTO GET_IT_SUBLOOP2
+Warning[203]: Found opcode in column 1. (GOTO)
+006C   288D           00107 GOTO AFTER_SCAN_IT
+                      00108 
+006D                  00109 ASSIGN_NEW_TO_OLD
+Warning[203]: Found opcode in column 1. (MOVF)
+006D   0841           00110 MOVF 0X41,0
+Warning[203]: Found opcode in column 1. (MOVWF)
+006E   00C0           00111 MOVWF 0X40
+Warning[203]: Found opcode in column 1. (GOTO)
+006F   2860           00112 GOTO GET_IT_SUBLOOP
+                      00113 
+                      00114 ;----------------------------------------------------------
+                      00115 ;STARTING OF SCAN_IT
+                      00116 ;----------------------------------------------------------
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00117 
+0070                  00118 SCAN_IT
+                      00119 
+                      00120 ;----------------------------
+                      00121 ; SLEEP MODE CHECK
+                      00122 ;----------------------------
+Warning[203]: Found opcode in column 1. (CALL)
+0070   2245           00123 CALL SLEEP_CHECK1
+                      00124 ;----------------------------
+                      00125 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0071   3001           00126 MOVLW 0X01 
+Warning[203]: Found opcode in column 1. (MOVWF)
+0072   00A0           00127 MOVWF 0X20       ;0X20 IS THE KEY_COUNT VARIABLE
+Warning[203]: Found opcode in column 1. (MOVLW)
+0073   30F7           00128 MOVLW 0XF7
+Warning[203]: Found opcode in column 1. (MOVWF)
+0074   00A1           00129 MOVWF 0X21       ;0X21 IS THE PATTERN TO BE GIVEN TO PORTB
+Warning[207]: Found label after column 1. (SUB_LOOP)
+0075                  00130     SUB_LOOP
+0075   0821           00131         MOVF 0X21,0
+0076   0086           00132         MOVWF PORTB  ;OUTPUT 'PATTERN' TO PORTB
+0077   0820           00133         MOVF 0X20,0 ;W=KEY_COUNT
+0078   1F86           00134         BTFSS PORTB,7
+0079   288B           00135         GOTO SCAN_IT_FINISH
+007A   3E03           00136     ADDLW 0X03
+007B   1F06           00137         BTFSS PORTB,6
+007C   288B           00138     GOTO SCAN_IT_FINISH
+007D   3E03           00139     ADDLW 0X03
+007E   1E86           00140         BTFSS PORTB,5
+007F   288B           00141         GOTO SCAN_IT_FINISH
+0080   3E03           00142     ADDLW 0X03
+0081   1E06           00143         BTFSS PORTB,4
+0082   288B           00144         GOTO SCAN_IT_FINISH
+0083   30FF           00145     MOVLW 0XFF          ;THESE STEPS
+0084   00B0           00146     MOVWF 0X30     
+0085   0AB0           00147     INCF 0X30,1         ;USED TO SET CARRY FOR THE RIGHT SHIFT
+0086   30FF           00148     MOVLW 0XFF          ;MOVING A MARKER TO W TO SHOW NO KEY PRESSED ON THE COLUMN
+0087   0AA0           00149         INCF 0X20,1         ;INCREMENT KEY_COUNT
+0088   0CA1           00150     RRF 0X21,1          ;SHIFT PATTERN RIGHT
+0089   1821           00151     BTFSC 0X21,0        ;CHECKING IF PATTERN(0) IS CLEAR
+008A   2875           00152     GOTO SUB_LOOP       ;CHECK NXT COLUMN IF PATTERN(0) IS STILL 1
+008B                  00153 SCAN_IT_FINISH
+                      00154 
+Warning[203]: Found opcode in column 1. (MOVWF)
+008B   00A2           00155 MOVWF 0X22   ;0X22 WILL HAVE THE KEYVALUE,FF-->NO READ ; 
+Warning[203]: Found opcode in column 1. (RETURN)
+008C   0008           00156 RETURN
+                      00157 ;FINISHING OF SCAN_IT
+008D                  00158 AFTER_SCAN_IT
+Warning[203]: Found opcode in column 1. (MOVF)
+008D   0840           00159 MOVF 0X40,0 ;W<--OLD_KEY
+Warning[203]: Found opcode in column 1. (MOVWF)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+008E   00B0           00160 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (INCF)
+008F   0AB0           00161 INCF 0X30,1 ;CHECKING IF THE CONTINUOUSLY OCCURED VALUE WAS FF(IE. NO READ)
+Warning[203]: Found opcode in column 1. (BTFSC)
+0090   1903           00162 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0091   2852           00163 GOTO GET_IT
+Warning[203]: Found opcode in column 1. (GOTO)
+0092   2893           00164 GOTO CHECK_ROUTINE
+                      00165 ;STARTING OF DATA STORAGE ALGORITHM
+                      00166 
+0093                  00167 CHECK_ROUTINE
+Warning[203]: Found opcode in column 1. (MOVF)
+0093   0840           00168 MOVF 0X40,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+0094   3C0A           00169 SUBLW 0X0A
+Warning[203]: Found opcode in column 1. (MOVWF)
+0095   00B0           00170 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+0096   0830           00171 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+0097   1903           00172 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0098   28A1           00173 GOTO KEY_IS_STAR
+Warning[203]: Found opcode in column 1. (MOVF)
+0099   0840           00174 MOVF 0X40,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+009A   3C0B           00175 SUBLW 0X0B
+Warning[203]: Found opcode in column 1. (MOVWF)
+009B   00B0           00176 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+009C   0830           00177 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+009D   1903           00178 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+009E   28A6           00179 GOTO KEY_IS_ZERO
+Warning[203]: Found opcode in column 1. (MOVF)
+009F   0840           00180 MOVF 0X40,0
+                      00181 
+Warning[203]: Found opcode in column 1. (GOTO)
+00A0   28D4           00182 GOTO REG_SETTER
+                      00183 
+00A1                  00184 KEY_IS_STAR
+Warning[203]: Found opcode in column 1. (MOVF)
+00A1   0850           00185 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00A2   1903           00186 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00A3   2852           00187 GOTO GET_IT
+Warning[203]: Found opcode in column 1. (DECF)
+00A4   03D0           00188 DECF 0X50,1
+Warning[203]: Found opcode in column 1. (GOTO)
+00A5   28F3           00189 GOTO OUTPUT_SETTER
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  7
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00190 
+00A6                  00191 KEY_IS_ZERO
+Warning[203]: Found opcode in column 1. (MOVF)
+00A6   0850           00192 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00A7   3C04           00193 SUBLW 0X04
+Warning[203]: Found opcode in column 1. (MOVWF)
+00A8   00B0           00194 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00A9   0830           00195 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00AA   1903           00196 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (CLRF)
+00AB   01D0           00197 CLRF 0X50
+Warning[203]: Found opcode in column 1. (INCF)
+00AC   0AD0           00198 INCF 0X50,1
+Warning[203]: Found opcode in column 1. (MOVLW)
+00AD   3000           00199 MOVLW 0X00
+Warning[203]: Found opcode in column 1. (MOVWF)
+00AE   00C0           00200 MOVWF 0X40
+Warning[203]: Found opcode in column 1. (MOVWF)
+00AF   00C1           00201 MOVWF 0X41
+Warning[203]: Found opcode in column 1. (MOVF)
+00B0   0850           00202 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00B1   3C01           00203 SUBLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+00B2   00B0           00204 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00B3   0830           00205 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00B4   1903           00206 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00B5   28C8           00207 GOTO LOC_AT_ONE
+Warning[203]: Found opcode in column 1. (MOVF)
+00B6   0850           00208 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00B7   3C02           00209 SUBLW 0X02
+Warning[203]: Found opcode in column 1. (MOVWF)
+00B8   00B0           00210 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00B9   0830           00211 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00BA   1903           00212 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00BB   28CB           00213 GOTO LOC_AT_TWO
+Warning[203]: Found opcode in column 1. (MOVF)
+00BC   0850           00214 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00BD   3C03           00215 SUBLW 0X03
+Warning[203]: Found opcode in column 1. (MOVWF)
+00BE   00B0           00216 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  8
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00BF   0830           00217 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00C0   1903           00218 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00C1   28CE           00219 GOTO LOC_AT_THREE
+Warning[203]: Found opcode in column 1. (MOVF)
+00C2   0850           00220 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00C3   3C04           00221 SUBLW 0X04
+Warning[203]: Found opcode in column 1. (MOVWF)
+00C4   00B0           00222 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00C5   0830           00223 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00C6   1903           00224 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00C7   28D1           00225 GOTO LOC_AT_FOUR
+                      00226 
+00C8                  00227 LOC_AT_ONE
+                      00228 ;MOVF 0X40,0
+Warning[203]: Found opcode in column 1. (MOVLW)
+00C8   3065           00229 MOVLW 0X65
+Warning[203]: Found opcode in column 1. (MOVWF)
+00C9   00F0           00230 MOVWF 0X70
+Warning[203]: Found opcode in column 1. (GOTO)
+00CA   28F3           00231 GOTO OUTPUT_SETTER
+                      00232 
+00CB                  00233 LOC_AT_TWO
+                      00234 ;MOVF 0X40,0
+Warning[203]: Found opcode in column 1. (MOVLW)
+00CB   3065           00235 MOVLW 0X65
+Warning[203]: Found opcode in column 1. (MOVWF)
+00CC   00F1           00236 MOVWF 0X71
+Warning[203]: Found opcode in column 1. (GOTO)
+00CD   28F3           00237 GOTO OUTPUT_SETTER
+                      00238 
+00CE                  00239 LOC_AT_THREE
+                      00240 ;MOVF 0X40,0
+Warning[203]: Found opcode in column 1. (MOVLW)
+00CE   3065           00241 MOVLW 0X65
+Warning[203]: Found opcode in column 1. (MOVWF)
+00CF   00F2           00242 MOVWF 0X72
+Warning[203]: Found opcode in column 1. (GOTO)
+00D0   28F3           00243 GOTO OUTPUT_SETTER
+                      00244 
+00D1                  00245 LOC_AT_FOUR
+                      00246 ;MOVF 0X40,0
+Warning[203]: Found opcode in column 1. (MOVLW)
+00D1   3065           00247 MOVLW 0X65
+Warning[203]: Found opcode in column 1. (MOVWF)
+00D2   00F3           00248 MOVWF 0X73
+Warning[203]: Found opcode in column 1. (GOTO)
+00D3   28F3           00249 GOTO OUTPUT_SETTER
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE  9
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00250 
+00D4                  00251 REG_SETTER
+Warning[203]: Found opcode in column 1. (MOVF)
+00D4   0850           00252 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00D5   3C04           00253 SUBLW 0X04
+Warning[203]: Found opcode in column 1. (MOVWF)
+00D6   00B0           00254 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00D7   0830           00255 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00D8   1903           00256 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (CLRF)
+00D9   01D0           00257 CLRF 0X50
+Warning[203]: Found opcode in column 1. (INCF)
+00DA   0AD0           00258 INCF 0X50,1
+Warning[203]: Found opcode in column 1. (MOVF)
+00DB   0850           00259 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00DC   3C01           00260 SUBLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+00DD   00B0           00261 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00DE   0830           00262 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00DF   1903           00263 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00E0   28C8           00264 GOTO LOC_AT_ONE
+Warning[203]: Found opcode in column 1. (MOVF)
+00E1   0850           00265 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00E2   3C02           00266 SUBLW 0X02
+Warning[203]: Found opcode in column 1. (MOVWF)
+00E3   00B0           00267 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00E4   0830           00268 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00E5   1903           00269 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00E6   28CB           00270 GOTO LOC_AT_TWO
+Warning[203]: Found opcode in column 1. (MOVF)
+00E7   0850           00271 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00E8   3C03           00272 SUBLW 0X03
+Warning[203]: Found opcode in column 1. (MOVWF)
+00E9   00B0           00273 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00EA   0830           00274 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00EB   1903           00275 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00EC   28CE           00276 GOTO LOC_AT_THREE
+Warning[203]: Found opcode in column 1. (MOVF)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 10
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+00ED   0850           00277 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00EE   3C04           00278 SUBLW 0X04
+Warning[203]: Found opcode in column 1. (MOVWF)
+00EF   00B0           00279 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00F0   0830           00280 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00F1   1903           00281 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00F2   28D1           00282 GOTO LOC_AT_FOUR
+                      00283 
+                      00284 ;----------------------------------------------------------
+                      00285 ; OUTPUTING PIN ON THE LCD
+                      00286 ;            AND
+                      00287 ; ENABLING SERIAL TRANSMISSION
+                      00288 ;----------------------------------------------------------
+                      00289 
+00F3                  00290 OUTPUT_SETTER
+                      00291 
+                      00292 ;----------------------------------------------------------
+                      00293 ; SERIAL TRANSMISSION
+                      00294 ;---------------------------------------------------------- 
+                      00295 
+Warning[203]: Found opcode in column 1. (MOVF)
+00F3   0840           00296 MOVF 0X40,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+00F4   3E30           00297 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVWF)
+00F5   0099           00298 MOVWF TXREG
+                      00299 
+                      00300 ;----------------------------------------------------------
+                      00301 ; OUTPUTING ENTERED PIN
+                      00302 ;----------------------------------------------------------
+                      00303 
+Warning[203]: Found opcode in column 1. (MOVF)
+00F6   0850           00304 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00F7   1903           00305 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00F8   298F           00306 GOTO OUTPUT_NULL
+Warning[203]: Found opcode in column 1. (MOVF)
+00F9   0850           00307 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+00FA   3C01           00308 SUBLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+00FB   00B0           00309 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+00FC   0830           00310 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+00FD   1903           00311 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+00FE   2911           00312 GOTO OUTPUT_ONE
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 11
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (MOVF)
+00FF   0850           00313 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+0100   3C02           00314 SUBLW 0X02
+Warning[203]: Found opcode in column 1. (MOVWF)
+0101   00B0           00315 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+0102   0830           00316 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+0103   1903           00317 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0104   2923           00318 GOTO OUTPUT_TWO
+Warning[203]: Found opcode in column 1. (MOVF)
+0105   0850           00319 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+0106   3C03           00320 SUBLW 0X03
+Warning[203]: Found opcode in column 1. (MOVWF)
+0107   00B0           00321 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+0108   0830           00322 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+0109   1903           00323 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+010A   293E           00324 GOTO OUTPUT_THREE
+Warning[203]: Found opcode in column 1. (MOVF)
+010B   0850           00325 MOVF 0X50,0
+Warning[203]: Found opcode in column 1. (SUBLW)
+010C   3C04           00326 SUBLW 0X04
+Warning[203]: Found opcode in column 1. (MOVWF)
+010D   00B0           00327 MOVWF 0X30
+Warning[203]: Found opcode in column 1. (MOVF)
+010E   0830           00328 MOVF 0X30,0
+Warning[203]: Found opcode in column 1. (BTFSC)
+010F   1903           00329 BTFSC STATUS,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0110   2962           00330 GOTO OUTPUT_FOUR
+                      00331 
+0111                  00332 OUTPUT_ONE
+Warning[203]: Found opcode in column 1. (BSF)
+0111   1507           00333 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BCF)
+0112   1007           00334 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0113   224F           00335 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+0114   3001           00336 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+0115   0088           00337 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0116   224F           00338 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0117   1107           00339 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 12
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0118   224F           00340 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0119   1507           00341 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+011A   1407           00342 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+011B   224F           00343 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+011C   0870           00344 MOVF 0X70,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+011D   3E30           00345 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+011E   302A           00346 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+011F   0088           00347 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0120   224F           00348 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0121   1107           00349 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0122   2852           00350 GOTO GET_IT
+                      00351 
+0123                  00352 OUTPUT_TWO
+Warning[203]: Found opcode in column 1. (BSF)
+0123   1507           00353 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BCF)
+0124   1007           00354 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0125   224F           00355 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+0126   3001           00356 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+0127   0088           00357 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0128   224F           00358 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0129   1107           00359 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+012A   224F           00360 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+012B   1507           00361 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+012C   1407           00362 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+012D   224F           00363 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+012E   0870           00364 MOVF 0X70,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+012F   3E30           00365 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+0130   302A           00366 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0131   0088           00367 MOVWF PORTD
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 13
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (CALL)
+0132   224F           00368 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0133   1107           00369 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0134   224F           00370 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0135   1507           00371 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0136   224F           00372 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+0137   0871           00373 MOVF 0X71,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+0138   3E30           00374 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+0139   302A           00375 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+013A   0088           00376 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+013B   224F           00377 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+013C   1107           00378 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (GOTO)
+013D   2852           00379 GOTO GET_IT
+                      00380 
+013E                  00381 OUTPUT_THREE
+Warning[203]: Found opcode in column 1. (BSF)
+013E   1507           00382 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BCF)
+013F   1007           00383 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0140   224F           00384 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+0141   3001           00385 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+0142   0088           00386 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0143   224F           00387 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0144   1107           00388 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0145   224F           00389 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0146   1507           00390 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+0147   1407           00391 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0148   224F           00392 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+0149   0870           00393 MOVF 0X70,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+014A   3E30           00394 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 14
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+014B   302A           00395 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+014C   0088           00396 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+014D   224F           00397 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+014E   1107           00398 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+014F   224F           00399 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0150   1507           00400 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0151   224F           00401 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+0152   0871           00402 MOVF 0X71,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+0153   3E30           00403 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+0154   302A           00404 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0155   0088           00405 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0156   224F           00406 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0157   1107           00407 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0158   224F           00408 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0159   1507           00409 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+015A   224F           00410 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+015B   0872           00411 MOVF 0X72,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+015C   3E30           00412 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+015D   302A           00413 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+015E   0088           00414 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+015F   224F           00415 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0160   1107           00416 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0161   2852           00417 GOTO GET_IT
+                      00418 
+0162                  00419 OUTPUT_FOUR
+Warning[203]: Found opcode in column 1. (BSF)
+0162   1507           00420 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BCF)
+0163   1007           00421 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0164   224F           00422 CALL DELAY
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 15
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (MOVLW)
+0165   3001           00423 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+0166   0088           00424 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0167   224F           00425 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0168   1107           00426 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0169   224F           00427 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+016A   1507           00428 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+016B   1407           00429 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+016C   224F           00430 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+016D   0870           00431 MOVF 0X70,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+016E   3E30           00432 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+016F   302A           00433 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0170   0088           00434 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0171   224F           00435 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0172   1107           00436 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0173   224F           00437 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0174   1507           00438 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0175   224F           00439 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+0176   0871           00440 MOVF 0X71,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+0177   3E30           00441 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+0178   302A           00442 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0179   0088           00443 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+017A   224F           00444 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+017B   1107           00445 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+017C   224F           00446 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+017D   1507           00447 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+017E   224F           00448 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 16
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+017F   0872           00449 MOVF 0X72,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+0180   3E30           00450 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+0181   302A           00451 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0182   0088           00452 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0183   224F           00453 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0184   1107           00454 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0185   224F           00455 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0186   1507           00456 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0187   224F           00457 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVF)
+0188   0873           00458 MOVF 0X73,0
+Warning[203]: Found opcode in column 1. (ADDLW)
+0189   3E30           00459 ADDLW 0X30
+Warning[203]: Found opcode in column 1. (MOVLW)
+018A   302A           00460 MOVLW '*'
+Warning[203]: Found opcode in column 1. (MOVWF)
+018B   0088           00461 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+018C   224F           00462 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+018D   1107           00463 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (GOTO)
+018E   2852           00464 GOTO GET_IT
+                      00465 
+018F                  00466 OUTPUT_NULL
+Warning[203]: Found opcode in column 1. (BSF)
+018F   1507           00467 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BCF)
+0190   1007           00468 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0191   224F           00469 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+0192   3001           00470 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+0193   0088           00471 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0194   224F           00472 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0195   1107           00473 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (GOTO)
+0196   2852           00474 GOTO GET_IT
+                      00475 
+                      00476 ;----------------------------------------------------------
+                      00477 ; TO DISPLAY WEATHER ACCEPTED OR DENIED
+                      00478 ;---------------------------------------------------------- 
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 17
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00479 
+0197                  00480 ACCEPTED:
+                      00481 
+Warning[203]: Found opcode in column 1. (BSF)
+0197   1507           00482 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BCF)
+0198   1007           00483 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0199   224F           00484 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+019A   3001           00485 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+019B   0088           00486 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+019C   224F           00487 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+019D   1107           00488 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+019E   224F           00489 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+019F   1507           00490 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+01A0   1407           00491 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+01A1   2258           00492 CALL DELAY2
+                      00493 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01A2   3041           00494 MOVLW 'A'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01A3   0088           00495 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01A4   224F           00496 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01A5   1107           00497 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01A6   224F           00498 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01A7   1507           00499 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01A8   2258           00500 CALL DELAY2
+                      00501 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01A9   3043           00502 MOVLW 'C'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01AA   0088           00503 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01AB   224F           00504 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01AC   1107           00505 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01AD   224F           00506 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01AE   1507           00507 BSF PORTC,2
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 18
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (CALL)
+01AF   2258           00508 CALL DELAY2
+                      00509 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01B0   3043           00510 MOVLW 'C'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01B1   0088           00511 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01B2   224F           00512 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01B3   1107           00513 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01B4   224F           00514 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01B5   1507           00515 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01B6   2258           00516 CALL DELAY2
+                      00517 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01B7   3045           00518 MOVLW 'E'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01B8   0088           00519 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01B9   224F           00520 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01BA   1107           00521 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01BB   224F           00522 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01BC   1507           00523 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01BD   2258           00524 CALL DELAY2
+                      00525 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01BE   3050           00526 MOVLW 'P'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01BF   0088           00527 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01C0   224F           00528 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01C1   1107           00529 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01C2   224F           00530 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01C3   1507           00531 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01C4   2258           00532 CALL DELAY2
+                      00533 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01C5   3054           00534 MOVLW 'T'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01C6   0088           00535 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 19
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+01C7   224F           00536 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01C8   1107           00537 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01C9   224F           00538 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01CA   1507           00539 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+01CB   1407           00540 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+01CC   2258           00541 CALL DELAY2
+                      00542 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01CD   3045           00543 MOVLW 'E'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01CE   0088           00544 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01CF   224F           00545 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01D0   1107           00546 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01D1   224F           00547 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01D2   1507           00548 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+01D3   1407           00549 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+01D4   2258           00550 CALL DELAY2
+                      00551 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01D5   3044           00552 MOVLW 'D'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01D6   0088           00553 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01D7   224F           00554 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01D8   1107           00555 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01D9   224F           00556 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01DA   1507           00557 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01DB   2258           00558 CALL DELAY2
+                      00559 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01DC   3020           00560 MOVLW ' '
+Warning[203]: Found opcode in column 1. (MOVWF)
+01DD   0088           00561 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01DE   224F           00562 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01DF   1107           00563 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 20
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+01E0   224F           00564 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01E1   1507           00565 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01E2   2258           00566 CALL DELAY2
+                      00567 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01E3   3020           00568 MOVLW ' '
+Warning[203]: Found opcode in column 1. (MOVWF)
+01E4   0088           00569 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01E5   224F           00570 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01E6   1107           00571 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01E7   224F           00572 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01E8   1507           00573 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01E9   2258           00574 CALL DELAY2
+                      00575 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01EA   303A           00576 MOVLW ':'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01EB   0088           00577 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01EC   224F           00578 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01ED   1107           00579 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01EE   224F           00580 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01EF   1507           00581 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01F0   2258           00582 CALL DELAY2
+                      00583 
+Warning[203]: Found opcode in column 1. (MOVLW)
+01F1   3029           00584 MOVLW ')'
+Warning[203]: Found opcode in column 1. (MOVWF)
+01F2   0088           00585 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01F3   224F           00586 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01F4   1107           00587 BCF PORTC,2
+                      00588 
+01F5                  00589 ACC:
+Warning[203]: Found opcode in column 1. (GOTO)
+01F5   29F5           00590 GOTO ACC
+                      00591 
+                      00592 ;----------------------------------------------------------
+                      00593 
+01F6                  00594 DENIED:
+                      00595 
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 21
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (BSF)
+01F6   1507           00596 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BCF)
+01F7   1007           00597 BCF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+01F8   224F           00598 CALL DELAY
+Warning[203]: Found opcode in column 1. (MOVLW)
+01F9   3001           00599 MOVLW 0X01
+Warning[203]: Found opcode in column 1. (MOVWF)
+01FA   0088           00600 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+01FB   224F           00601 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+01FC   1107           00602 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+01FD   224F           00603 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+01FE   1507           00604 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (BSF)
+01FF   1407           00605 BSF PORTC,0
+Warning[203]: Found opcode in column 1. (CALL)
+0200   2258           00606 CALL DELAY2
+                      00607 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0201   3044           00608 MOVLW 'D'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0202   0088           00609 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0203   224F           00610 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0204   1107           00611 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0205   224F           00612 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0206   1507           00613 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0207   2258           00614 CALL DELAY2
+                      00615 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0208   3045           00616 MOVLW 'E'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0209   0088           00617 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+020A   224F           00618 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+020B   1107           00619 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+020C   224F           00620 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+020D   1507           00621 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+020E   2258           00622 CALL DELAY2
+                      00623 
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 22
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (MOVLW)
+020F   304E           00624 MOVLW 'N'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0210   0088           00625 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0211   224F           00626 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0212   1107           00627 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0213   224F           00628 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0214   1507           00629 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0215   2258           00630 CALL DELAY2
+                      00631 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0216   3049           00632 MOVLW 'I'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0217   0088           00633 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0218   224F           00634 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0219   1107           00635 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+021A   224F           00636 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+021B   1507           00637 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+021C   2258           00638 CALL DELAY2
+                      00639 
+Warning[203]: Found opcode in column 1. (MOVLW)
+021D   3045           00640 MOVLW 'E'
+Warning[203]: Found opcode in column 1. (MOVWF)
+021E   0088           00641 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+021F   224F           00642 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0220   1107           00643 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0221   224F           00644 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0222   1507           00645 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0223   2258           00646 CALL DELAY2
+                      00647 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0224   3044           00648 MOVLW 'D'
+Warning[203]: Found opcode in column 1. (MOVWF)
+0225   0088           00649 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0226   224F           00650 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0227   1107           00651 BCF PORTC,2
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 23
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[203]: Found opcode in column 1. (CALL)
+0228   224F           00652 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0229   1507           00653 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+022A   2258           00654 CALL DELAY2
+                      00655 
+Warning[203]: Found opcode in column 1. (MOVLW)
+022B   3020           00656 MOVLW ' '
+Warning[203]: Found opcode in column 1. (MOVWF)
+022C   0088           00657 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+022D   224F           00658 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+022E   1107           00659 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+022F   224F           00660 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0230   1507           00661 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0231   2258           00662 CALL DELAY2
+                      00663 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0232   3020           00664 MOVLW ' '
+Warning[203]: Found opcode in column 1. (MOVWF)
+0233   0088           00665 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0234   224F           00666 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0235   1107           00667 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0236   224F           00668 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+0237   1507           00669 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+0238   2258           00670 CALL DELAY2
+                      00671 
+Warning[203]: Found opcode in column 1. (MOVLW)
+0239   303A           00672 MOVLW ':'
+Warning[203]: Found opcode in column 1. (MOVWF)
+023A   0088           00673 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+023B   224F           00674 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+023C   1107           00675 BCF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+023D   224F           00676 CALL DELAY
+Warning[203]: Found opcode in column 1. (BSF)
+023E   1507           00677 BSF PORTC,2
+Warning[203]: Found opcode in column 1. (CALL)
+023F   2258           00678 CALL DELAY2
+                      00679 
+Warning[203]: Found opcode in column 1. (MOVLW)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 24
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0240   3028           00680 MOVLW '('
+Warning[203]: Found opcode in column 1. (MOVWF)
+0241   0088           00681 MOVWF PORTD
+Warning[203]: Found opcode in column 1. (CALL)
+0242   224F           00682 CALL DELAY
+Warning[203]: Found opcode in column 1. (BCF)
+0243   1107           00683 BCF PORTC,2
+                      00684 
+0244                  00685 DCC:
+Warning[203]: Found opcode in column 1. (GOTO)
+0244   2A44           00686 GOTO DCC
+                      00687 ;----------------------------------------------------------
+                      00688 ; SLEEP FUNCTIONS
+                      00689 ;----------------------------------------------------------
+0245                  00690 SLEEP_CHECK1:
+Warning[203]: Found opcode in column 1. (MOVF)
+0245   0855           00691 MOVF 0X55,0
+Warning[203]: Found opcode in column 1. (BTFSS)
+0246   1D03           00692 BTFSS STATUS,Z
+Warning[203]: Found opcode in column 1. (DECF)
+0247   03D5           00693 DECF 0X55,1
+Warning[203]: Found opcode in column 1. (BTFSC)
+0248   1903           00694 BTFSC STATUS,Z
+Warning[203]: Found opcode in column 1. (RETURN)
+0249   0008           00695 RETURN
+Warning[203]: Found opcode in column 1. (DECF)
+024A   03D5           00696 DECF 0X55,1
+Warning[203]: Found opcode in column 1. (BTFSC)
+024B   1903           00697 BTFSC STATUS,Z
+Warning[203]: Found opcode in column 1. (RETURN)
+024C   0008           00698 RETURN
+Warning[203]: Found opcode in column 1. (SLEEP)
+024D   0063           00699 SLEEP
+Warning[203]: Found opcode in column 1. (RETURN)
+024E   0008           00700 RETURN
+                      00701 
+                      00702 ;----------------------------------------------------------
+                      00703 ; EXTRA FUNCTIONS
+                      00704 ;----------------------------------------------------------
+024F                  00705 DELAY:
+Warning[203]: Found opcode in column 1. (MOVLW)
+024F   3009           00706 MOVLW 0X09
+Warning[203]: Found opcode in column 1. (MOVWF)
+0250   00E1           00707 MOVWF 0X61
+0251                  00708 D2
+Warning[203]: Found opcode in column 1. (MOVLW)
+0251   3021           00709 MOVLW 0X21
+Warning[203]: Found opcode in column 1. (MOVWF)
+0252   00E0           00710 MOVWF 0X60
+0253                  00711 D1
+Warning[203]: Found opcode in column 1. (DECFSZ)
+0253   0BE0           00712 DECFSZ 0X60,1
+Warning[203]: Found opcode in column 1. (GOTO)
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 25
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0254   2A53           00713 GOTO D1
+Warning[203]: Found opcode in column 1. (DECFSZ)
+0255   0BE1           00714 DECFSZ 0X61,1
+Warning[203]: Found opcode in column 1. (GOTO)
+0256   2A51           00715 GOTO D2
+Warning[203]: Found opcode in column 1. (RETURN)
+0257   0008           00716 RETURN
+                      00717 
+0258                  00718 DELAY2:
+Warning[203]: Found opcode in column 1. (MOVLW)
+0258   30FF           00719 MOVLW 0XFF
+Warning[203]: Found opcode in column 1. (MOVWF)
+0259   00E1           00720 MOVWF 0X61
+025A                  00721 D3
+Warning[203]: Found opcode in column 1. (MOVLW)
+025A   303F           00722 MOVLW 0X3F
+Warning[203]: Found opcode in column 1. (MOVWF)
+025B   00E0           00723 MOVWF 0X60
+025C                  00724 D4
+Warning[203]: Found opcode in column 1. (DECFSZ)
+025C   0BE0           00725 DECFSZ 0X60,1
+Warning[203]: Found opcode in column 1. (GOTO)
+025D   2A5C           00726 GOTO D4
+Warning[203]: Found opcode in column 1. (DECFSZ)
+025E   0BE1           00727 DECFSZ 0X61,1
+Warning[203]: Found opcode in column 1. (GOTO)
+025F   2A5A           00728 GOTO D3
+Warning[203]: Found opcode in column 1. (RETURN)
+0260   0008           00729 RETURN
+                      00730 
+                      00731 ;----------------------------------------------------------
+                      00732 
+Warning[205]: Found directive in column 1. (END)
+                      00733 END
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 26
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+ACC                               000001F5
+ACCEPTED                          00000197
+ACKDT                             00000005
+ACKEN                             00000004
+ACKSTAT                           00000006
+ADCON0                            0000001F
+ADCON1                            0000009F
+ADCS0                             00000006
+ADCS1                             00000007
+ADCS2                             00000006
+ADDEN                             00000003
+ADFM                              00000007
+ADIE                              00000006
+ADIF                              00000006
+ADON                              00000000
+ADRESH                            0000001E
+ADRESL                            0000009E
+AFTER_SCAN_IT                     0000008D
+ASSIGN_NEW_TO_OLD                 0000006D
+BCLIE                             00000003
+BCLIF                             00000003
+BF                                00000000
+BRGH                              00000002
+C                                 00000000
+C1INV                             00000004
+C1OUT                             00000006
+C2INV                             00000005
+C2OUT                             00000007
+CCP1CON                           00000017
+CCP1IE                            00000002
+CCP1IF                            00000002
+CCP1M0                            00000000
+CCP1M1                            00000001
+CCP1M2                            00000002
+CCP1M3                            00000003
+CCP1X                             00000005
+CCP1Y                             00000004
+CCP2CON                           0000001D
+CCP2IE                            00000000
+CCP2IF                            00000000
+CCP2M0                            00000000
+CCP2M1                            00000001
+CCP2M2                            00000002
+CCP2M3                            00000003
+CCP2X                             00000005
+CCP2Y                             00000004
+CCPR1H                            00000016
+CCPR1L                            00000015
+CCPR2H                            0000001C
+CCPR2L                            0000001B
+CHECK_ROUTINE                     00000093
+CHS0                              00000003
+CHS1                              00000004
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 27
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CHS2                              00000005
+CIS                               00000003
+CKE                               00000006
+CKP                               00000004
+CM0                               00000000
+CM1                               00000001
+CM2                               00000002
+CMCON                             0000009C
+CMIE                              00000006
+CMIF                              00000006
+CREN                              00000004
+CSRC                              00000007
+CVR0                              00000000
+CVR1                              00000001
+CVR2                              00000002
+CVR3                              00000003
+CVRCON                            0000009D
+CVREN                             00000007
+CVROE                             00000006
+CVRR                              00000005
+D                                 00000005
+D1                                00000253
+D2                                00000251
+D3                                0000025A
+D4                                0000025C
+DATA_ADDRESS                      00000005
+DC                                00000001
+DCC                               00000244
+DELAY                             0000024F
+DELAY2                            00000258
+DENIED                            000001F6
+D_A                               00000005
+EEADR                             0000010D
+EEADRH                            0000010F
+EECON1                            0000018C
+EECON2                            0000018D
+EEDATA                            0000010C
+EEDATH                            0000010E
+EEIE                              00000004
+EEIF                              00000004
+EEPGD                             00000007
+F                                 00000001
+FERR                              00000002
+FSR                               00000004
+GCEN                              00000007
+GET_IT                            00000052
+GET_IT_SUBLOOP                    00000060
+GET_IT_SUBLOOP2                   00000062
+GIE                               00000007
+GO                                00000002
+GO_DONE                           00000002
+I2C_DATA                          00000005
+I2C_READ                          00000002
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 28
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+I2C_START                         00000003
+I2C_STOP                          00000004
+IBF                               00000007
+IBOV                              00000005
+INDF                              00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+KEY_IS_STAR                       000000A1
+KEY_IS_ZERO                       000000A6
+LOC_AT_FOUR                       000000D1
+LOC_AT_ONE                        000000C8
+LOC_AT_THREE                      000000CE
+LOC_AT_TWO                        000000CB
+NOT_A                             00000005
+NOT_ADDRESS                       00000005
+NOT_BO                            00000000
+NOT_BOR                           00000000
+NOT_DONE                          00000002
+NOT_PD                            00000003
+NOT_POR                           00000001
+NOT_RBPU                          00000007
+NOT_RC8                           00000006
+NOT_T1SYNC                        00000002
+NOT_TO                            00000004
+NOT_TX8                           00000006
+NOT_W                             00000002
+NOT_WRITE                         00000002
+OBF                               00000006
+OERR                              00000001
+OPTION_REG                        00000081
+OUTPUT_FOUR                       00000162
+OUTPUT_NULL                       0000018F
+OUTPUT_ONE                        00000111
+OUTPUT_SETTER                     000000F3
+OUTPUT_THREE                      0000013E
+OUTPUT_TWO                        00000123
+P                                 00000004
+PCFG0                             00000000
+PCFG1                             00000001
+PCFG2                             00000002
+PCFG3                             00000003
+PCL                               00000002
+PCLATH                            0000000A
+PCON                              0000008E
+PEIE                              00000006
+PEN                               00000002
+PIE1                              0000008C
+PIE2                              0000008D
+PIR1                              0000000C
+PIR2                              0000000D
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 29
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+PORTA                             00000005
+PORTB                             00000006
+PORTC                             00000007
+PORTD                             00000008
+PORTE                             00000009
+PR2                               00000092
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+PSPIE                             00000007
+PSPIF                             00000007
+PSPMODE                           00000004
+R                                 00000002
+RBIE                              00000003
+RBIF                              00000000
+RC8_9                             00000006
+RC9                               00000006
+RCD8                              00000000
+RCEN                              00000003
+RCIE                              00000005
+RCIF                              00000005
+RCREG                             0000001A
+RCSTA                             00000018
+RD                                00000000
+READ_WRITE                        00000002
+REG_SETTER                        000000D4
+RP0                               00000005
+RP1                               00000006
+RSEN                              00000001
+RX9                               00000006
+RX9D                              00000000
+R_W                               00000002
+S                                 00000003
+SCAN_IT                           00000070
+SCAN_IT_FINISH                    0000008B
+SEN                               00000000
+SLEEP_CHECK1                      00000245
+SMP                               00000007
+SPBRG                             00000099
+SPEN                              00000007
+SREN                              00000005
+SSPADD                            00000093
+SSPBUF                            00000013
+SSPCON                            00000014
+SSPCON2                           00000091
+SSPEN                             00000005
+SSPIE                             00000003
+SSPIF                             00000003
+SSPM0                             00000000
+SSPM1                             00000001
+SSPM2                             00000002
+SSPM3                             00000003
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 30
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+SSPOV                             00000006
+SSPSTAT                           00000094
+STATUS                            00000003
+SUB_LOOP                          00000075
+SYNC                              00000004
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+T1CKPS0                           00000004
+T1CKPS1                           00000005
+T1CON                             00000010
+T1INSYNC                          00000002
+T1OSCEN                           00000003
+T1SYNC                            00000002
+T2CKPS0                           00000000
+T2CKPS1                           00000001
+T2CON                             00000012
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TMR1CS                            00000001
+TMR1H                             0000000F
+TMR1IE                            00000000
+TMR1IF                            00000000
+TMR1L                             0000000E
+TMR1ON                            00000000
+TMR2                              00000011
+TMR2IE                            00000001
+TMR2IF                            00000001
+TMR2ON                            00000002
+TOUTPS0                           00000003
+TOUTPS1                           00000004
+TOUTPS2                           00000005
+TOUTPS3                           00000006
+TRISA                             00000085
+TRISB                             00000086
+TRISC                             00000087
+TRISD                             00000088
+TRISE                             00000089
+TRISE0                            00000000
+TRISE1                            00000001
+TRISE2                            00000002
+TRMT                              00000001
+TX8_9                             00000006
+TX9                               00000006
+TX9D                              00000000
+TXD8                              00000000
+TXEN                              00000005
+TXIE                              00000004
+TXIF                              00000004
+TXREG                             00000019
+TXSTA                             00000098
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 31
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+UA                                00000001
+W                                 00000000
+WCOL                              00000007
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_BODEN_OFF                        00003FBF
+_BODEN_ON                         00003FFF
+_CPD_OFF                          00003FFF
+_CPD_ON                           00003EFF
+_CP_ALL                           00001FFF
+_CP_OFF                           00003FFF
+_DEBUG_OFF                        00003FFF
+_DEBUG_ON                         000037FF
+_HS_OSC                           00003FFE
+_LP_OSC                           00003FFC
+_LVP_OFF                          00003F7F
+_LVP_ON                           00003FFF
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_WRT_1FOURTH                      00003BFF
+_WRT_256                          00003DFF
+_WRT_HALF                         000039FF
+_WRT_OFF                          00003FFF
+_XT_OSC                           00003FFD
+__16F877A                         00000001
+__DEBUG                           1
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : ---------------- ---------------- XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0080 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+00C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0100 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0140 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0180 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+01C0 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0200 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
+0240 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX X--------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:   577
+Program Memory Words Free:  7615
+
+MPASM  5.31                      CHECKING.ASM   1-10-2010  15:28:32         PAGE 32
+
+
+
+
+
+
+Errors   :     0
+Warnings :   559 reported,     0 suppressed
+Messages :    11 reported,     0 suppressed
+
+

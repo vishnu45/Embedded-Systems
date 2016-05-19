@@ -1,0 +1,73 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Sat Dec 05 22:37:38 2009
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000f6
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00007a      
+            123 out of 8456 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       D1   0x000076    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                       D2   0x000074    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    DELAY   0x000072    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                   ENABLE   0x00006d    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+             INITIALISING   0x000006    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP1   0x00000d    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP2   0x000025    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP3   0x00003d    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP4   0x000055    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT1   0x000016    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT2   0x00001b    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT3   0x000020    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT4   0x00002e    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT5   0x000033    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT6   0x000038    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT7   0x000046    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT8   0x00004b    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT9   0x000050    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUTA   0x00005e    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUTB   0x000063    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUTC   0x000068    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    START   0x000008    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             INITIALISING   0x000006    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    START   0x000008    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP1   0x00000d    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT1   0x000016    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT2   0x00001b    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT3   0x000020    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP2   0x000025    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT4   0x00002e    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT5   0x000033    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT6   0x000038    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP3   0x00003d    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT7   0x000046    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT8   0x00004b    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUT9   0x000050    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    LOOP4   0x000055    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUTA   0x00005e    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUTB   0x000063    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                     OUTC   0x000068    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                   ENABLE   0x00006d    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                    DELAY   0x000072    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                       D2   0x000074    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+                       D1   0x000076    program     static E:\Testing\04. LCD  Keypad  Display\Lcd2.asm
+
+

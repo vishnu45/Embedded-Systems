@@ -1,0 +1,82 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Sat Dec 12 00:24:28 2009
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000020    program   0x0002cc
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000020    0x000185      
+            358 out of 8456 program addresses used, program memory utilization is 4%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       D1   0x000180    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                       D2   0x00017e    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+            after_scan_it   0x000076    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+        assign_new_to_old   0x000057    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+            check_routine   0x00007c    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                    delay   0x00017c    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                   get_it   0x000047    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+           get_it_subloop   0x00004a    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+          get_it_subloop2   0x00004c    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              key_is_star   0x00008f    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              key_is_zero   0x000094    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              loc_at_four   0x0000bf    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               loc_at_one   0x0000b6    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+             loc_at_three   0x0000bc    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               loc_at_two   0x0000b9    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              output_four   0x00014b    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              output_null   0x000174    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               output_one   0x000100    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+            output_setter   0x0000e1    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+             output_three   0x00012a    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               output_two   0x000111    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               reg_setter   0x0000c2    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                  scan_it   0x00005a    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+           scan_it_finish   0x000074    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                 sub_loop   0x00005e    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                 usart_tx   0x000185    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   get_it   0x000047    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+           get_it_subloop   0x00004a    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+          get_it_subloop2   0x00004c    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+        assign_new_to_old   0x000057    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                  scan_it   0x00005a    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                 sub_loop   0x00005e    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+           scan_it_finish   0x000074    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+            after_scan_it   0x000076    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+            check_routine   0x00007c    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              key_is_star   0x00008f    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              key_is_zero   0x000094    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               loc_at_one   0x0000b6    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               loc_at_two   0x0000b9    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+             loc_at_three   0x0000bc    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              loc_at_four   0x0000bf    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               reg_setter   0x0000c2    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+            output_setter   0x0000e1    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               output_one   0x000100    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+               output_two   0x000111    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+             output_three   0x00012a    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              output_four   0x00014b    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+              output_null   0x000174    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                    delay   0x00017c    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                       D2   0x00017e    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                       D1   0x000180    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+                 usart_tx   0x000185    program     static E:\Testing\08.Serial LCD Keypad\checking.ASM
+
+

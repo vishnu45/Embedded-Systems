@@ -1,0 +1,46 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Fri Dec 25 12:44:49 2009
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x000002
+                   .org_2       code   0x000020    program   0x000036
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000000      
+                            0x000020    0x00003a      
+            28 out of 8456 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       D1   0x000034    program     static E:\Testing\12.TIMER\TIM11.ASM
+                       D2   0x000032    program     static E:\Testing\12.TIMER\TIM11.ASM
+                       D3   0x000030    program     static E:\Testing\12.TIMER\TIM11.ASM
+                    DELAY   0x00002e    program     static E:\Testing\12.TIMER\TIM11.ASM
+                    LOOP1   0x000024    program     static E:\Testing\12.TIMER\TIM11.ASM
+                    LOOP2   0x000026    program     static E:\Testing\12.TIMER\TIM11.ASM
+                    START   0x000020    program     static E:\Testing\12.TIMER\TIM11.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    START   0x000020    program     static E:\Testing\12.TIMER\TIM11.ASM
+                    LOOP1   0x000024    program     static E:\Testing\12.TIMER\TIM11.ASM
+                    LOOP2   0x000026    program     static E:\Testing\12.TIMER\TIM11.ASM
+                    DELAY   0x00002e    program     static E:\Testing\12.TIMER\TIM11.ASM
+                       D3   0x000030    program     static E:\Testing\12.TIMER\TIM11.ASM
+                       D2   0x000032    program     static E:\Testing\12.TIMER\TIM11.ASM
+                       D1   0x000034    program     static E:\Testing\12.TIMER\TIM11.ASM
+
+

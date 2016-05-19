@@ -1,0 +1,27 @@
+Warning[205] E:\TESTING\11.SERIAL PC\REC1.ASM 2 : Found directive in column 1. (LIST)
+Warning[205] E:\TESTING\11.SERIAL PC\REC1.ASM 3 : Found directive in column 1. (ORG)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 4 : Found opcode in column 1. (GOTO)
+Warning[205] E:\TESTING\11.SERIAL PC\REC1.ASM 5 : Found directive in column 1. (ORG)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 8 : Found opcode in column 1. (BSF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 9 : Found opcode in column 1. (CLRF)
+Message[302] E:\TESTING\11.SERIAL PC\REC1.ASM 9 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 10 : Found opcode in column 1. (MOVLW)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 11 : Found opcode in column 1. (MOVWF)
+Message[302] E:\TESTING\11.SERIAL PC\REC1.ASM 11 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 12 : Found opcode in column 1. (BCF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 14 : Found opcode in column 1. (MOVLW)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 15 : Found opcode in column 1. (MOVWF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 16 : Found opcode in column 1. (BSF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 17 : Found opcode in column 1. (MOVLW)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 18 : Found opcode in column 1. (MOVWF)
+Message[302] E:\TESTING\11.SERIAL PC\REC1.ASM 18 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 19 : Found opcode in column 1. (MOVLW)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 20 : Found opcode in column 1. (MOVWF)
+Message[302] E:\TESTING\11.SERIAL PC\REC1.ASM 20 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 21 : Found opcode in column 1. (BCF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 22 : Found opcode in column 1. (BSF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 27 : Found opcode in column 1. (CLRF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 29 : Found opcode in column 1. (MOVF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 30 : Found opcode in column 1. (MOVWF)
+Warning[203] E:\TESTING\11.SERIAL PC\REC1.ASM 31 : Found opcode in column 1. (GOTO)
+Warning[205] E:\TESTING\11.SERIAL PC\REC1.ASM 34 : Found directive in column 1. (END)

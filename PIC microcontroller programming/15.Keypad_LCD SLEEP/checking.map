@@ -1,0 +1,96 @@
+MPLINK 4.31, Linker
+Linker Map File - Created Sun Jan 10 15:28:39 2010
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000020    program   0x000482
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000020    0x000260      
+            577 out of 8456 program addresses used, program memory utilization is 6%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                      ACC   0x0001f5    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                 ACCEPTED   0x000197    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+            AFTER_SCAN_IT   0x00008d    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+        ASSIGN_NEW_TO_OLD   0x00006d    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+            CHECK_ROUTINE   0x000093    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D1   0x000253    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D2   0x000251    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D3   0x00025a    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D4   0x00025c    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                      DCC   0x000244    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                    DELAY   0x00024f    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                   DELAY2   0x000258    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                   DENIED   0x0001f6    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                   GET_IT   0x000052    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+           GET_IT_SUBLOOP   0x000060    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+          GET_IT_SUBLOOP2   0x000062    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              KEY_IS_STAR   0x0000a1    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              KEY_IS_ZERO   0x0000a6    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              LOC_AT_FOUR   0x0000d1    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               LOC_AT_ONE   0x0000c8    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+             LOC_AT_THREE   0x0000ce    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               LOC_AT_TWO   0x0000cb    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              OUTPUT_FOUR   0x000162    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              OUTPUT_NULL   0x00018f    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               OUTPUT_ONE   0x000111    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+            OUTPUT_SETTER   0x0000f3    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+             OUTPUT_THREE   0x00013e    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               OUTPUT_TWO   0x000123    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               REG_SETTER   0x0000d4    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                  SCAN_IT   0x000070    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+           SCAN_IT_FINISH   0x00008b    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+             SLEEP_CHECK1   0x000245    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                 SUB_LOOP   0x000075    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   GET_IT   0x000052    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+           GET_IT_SUBLOOP   0x000060    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+          GET_IT_SUBLOOP2   0x000062    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+        ASSIGN_NEW_TO_OLD   0x00006d    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                  SCAN_IT   0x000070    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                 SUB_LOOP   0x000075    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+           SCAN_IT_FINISH   0x00008b    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+            AFTER_SCAN_IT   0x00008d    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+            CHECK_ROUTINE   0x000093    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              KEY_IS_STAR   0x0000a1    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              KEY_IS_ZERO   0x0000a6    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               LOC_AT_ONE   0x0000c8    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               LOC_AT_TWO   0x0000cb    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+             LOC_AT_THREE   0x0000ce    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              LOC_AT_FOUR   0x0000d1    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               REG_SETTER   0x0000d4    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+            OUTPUT_SETTER   0x0000f3    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               OUTPUT_ONE   0x000111    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+               OUTPUT_TWO   0x000123    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+             OUTPUT_THREE   0x00013e    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              OUTPUT_FOUR   0x000162    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+              OUTPUT_NULL   0x00018f    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                 ACCEPTED   0x000197    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                      ACC   0x0001f5    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                   DENIED   0x0001f6    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                      DCC   0x000244    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+             SLEEP_CHECK1   0x000245    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                    DELAY   0x00024f    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D2   0x000251    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D1   0x000253    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                   DELAY2   0x000258    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D3   0x00025a    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+                       D4   0x00025c    program     static E:\Testing\15.Keypad_LCD SLEEP\checking.ASM
+
+

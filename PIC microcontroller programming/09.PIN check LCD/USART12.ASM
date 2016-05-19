@@ -1,0 +1,51 @@
+#INCLUDE P16F877A.INC
+LIST P=16F877A
+ORG 0X00
+GOTO START
+ORG 0X20
+
+START:
+BSF STATUS,RP0
+CLRF TRISB
+MOVLW 0X00
+MOVWF TRISD
+BCF STATUS,RP0
+
+MOVLW 0X90
+MOVWF RCSTA
+BSF STATUS,RP0
+MOVLW 0XFF
+MOVWF SPBRG
+MOVLW 0X24
+MOVWF TXSTA
+BCF STATUS,RP0
+BSF RCSTA,SPEN
+
+;-----------------------------------------------------------
+;RECIEVING SERIAL DATA
+;-----------------------------------------------------------
+
+STARTING_RECEPTION:
+MOVF RCREG,0
+MOVWF PORTD
+
+MOVLW 0X3C					; CHECKING FOR PIN CONFIRMATION
+SUBWF RCREG,0				; FROM USER
+BTFSC STATUS,2
+GOTO END_OF_RECEPTION
+GOTO STARTING_RECEPTION
+
+;-----------------------------------------------------------
+;TRANSMITTING BACK THE DATA
+;-----------------------------------------------------------
+
+END_OF_RECEPTION:
+
+MOVLW 0X0A
+MOVWF TXREG
+MOVF TXREG,0
+MOVWF PORTB
+GOTO STARTING_RECEPTION
+
+;-----------------------------------------------------------
+END
